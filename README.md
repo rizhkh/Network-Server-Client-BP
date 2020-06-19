@@ -1,4 +1,24 @@
-This remote client-server program manages to carry out the very basic functions required to perform the desired tasks that are needed by the operating party or the user.
-It'll check for the appropriate flags with any errors on standby if prompted with them,so it can be returned to the user.The input functionality of this program is done through one step,and that step is the of a whole string input at instance.
-It must be noted that when it is time to enter the input,the main commands like “read” or “write” should be properly written as “read” or “write” rather than “r” or “w”.While the program takes literal r and w and understands the functionality,it is better to input the whole word.Input should be as follows “read file.txt 4 r” .In the above the input,the digit 4 stands for the number of bytes to be read or written and “r” at the end of the string stands for the flags that were asked to be applied in the project description.In terms of the network connection handling,the threads in this program uses mutexers that allows the number of connections to be connected but the desired results on the client side is obtained in a queue like structure,strictly following the first in first out order for the execution of the program.
+# Network (Client-Server protocol)
+This remote client-server program allows user to send and receive files, with appropriate privilege allows the file to be read,write and executed, from one server to the other
+
+## Description
+Allows to perform basic functions and desired tasks required by the operating party .
+Code will confirm checks for appropriate flags with any errors on standby, if prompted will return it to the operating user.
+The input functionality is done as an input of a complete string 
+```
+read file.txt 4 r
+
+Note: Command “read” or “write” can only be written as 'read' or 'write'. 
+The '4' is number of bytes to be read or written and 'r' at the end of the string is one of flags.
+```
+In this piece of code, the threads in this program uses mutexers to allow multiple connections following First In First Out protocol, and connecting connections IP addresses can be displayed by the admin for logs and monitor purposes
+
+## Install & Run
+Unix: Upload project in folder, untar for safety purposes and execute
+```
+run Server and Client file after compilation using ' ./File.c ' in terminal.
+```
+
+
+
 
